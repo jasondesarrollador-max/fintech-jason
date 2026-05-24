@@ -1,35 +1,46 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Login Fintech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; padding-top: 50px; }
-        .login-box { border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
-        input { display: block; margin: 10px 0; padding: 8px; width: 200px; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #eef2f3;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2c3e50; }
+        .btn-exit {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #dc3545;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn-exit:hover { background-color: #a71d2a; }
     </style>
 </head>
 <body>
-    <div class="login-box">
-        <h2>Ingreso al Sistema</h2>
-        <input type="text" id="usuario" placeholder="Usuario">
-        <input type="password" id="clave" placeholder="Contraseña">
-        <button onclick="validar()">Ingresar</button>
-        <p id="error" style="color:red;"></p>
+
+    <div class="container">
+        <h1>¡Bienvenidos al Panel de Admin!</h1>
+        <p>Hola, administrador. Has ingresado correctamente a <b>Fintech Jason</b>.</p>
+        <a href="index.html" class="btn-exit">Cerrar sesión</a>
     </div>
 
-    <script>
-        function validar() {
-            const user = document.getElementById('usuario').value;
-            const pass = document.getElementById('clave').value;
-            
-            // Usuario y contraseña predefinidos
-            if (user === "adminblue" && pass === "adminblue") {
-                window.location.href = "admin.html";
-            } else {
-                document.getElementById('error').innerText = "Usuario o clave incorrectos";
-            }
-        }
-    </script>
 </body>
 </html>
